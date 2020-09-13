@@ -1,5 +1,8 @@
 def alayGenerator(sentence_input):
-    alay_dict = {
+    # fungsi untuk mengubah kata biasa ke alay
+
+    # dictionary huruf alay
+    huruf_alay = {
         'a': '4',
         'i': '1',
         'e': '3',
@@ -21,10 +24,10 @@ def alayGenerator(sentence_input):
     for word in sentence_input:
         for char in word:
             result.append(char)
-            for alay in alay_dict:
+            for alay in huruf_alay:
                 if (char == alay):
                     result.pop()
-                    result.append(alay_dict[char])
+                    result.append(huruf_alay[char])
 
     return ''.join(result)
 
